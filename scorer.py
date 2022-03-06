@@ -76,36 +76,38 @@ def index_for_confusion_table(param):
         return 34
     elif param == "WP$":
         return 35
-    elif param == "#":
+    elif param == "WRB":
         return 36
-    elif param == "$":
+    elif param == "#":
         return 37
-    elif param == ".":
+    elif param == "$":
         return 38
-    elif param == ",":
+    elif param == ".":
         return 39
-    elif param == ":":
+    elif param == ",":
         return 40
-    elif param == "(":
+    elif param == ":":
         return 41
-    elif param == ")":
+    elif param == "(":
         return 42
-    elif param == "\"":
+    elif param == ")":
         return 43
-    elif param == "\'":
+    elif param == "\"":
         return 44
-    elif param == "“":
+    elif param == "\'":
         return 45
-    elif param == "APO":
+    elif param == "“":
         return 46
-    elif param == "”":
+    elif param == "APO":
         return 47
-    elif param == "``":
+    elif param == "”":
         return 48
-    elif param == "''":
+    elif param == "``":
         return 49
-    elif param == "PRP$":
+    elif param == "''":
         return 50
+    elif param == "PRP$":
+        return 51
     else:
         return -1
 
