@@ -232,7 +232,7 @@ x.field_names = header
 
 incIndex = 0
 
-# Open and read the input test file and store it as a list of items
+# Open and read the input test file and store it as a list of items.
 with open(argv[1], 'r') as file:
     string = file.read()
     string = re.sub(r"\\/", r"", string)
