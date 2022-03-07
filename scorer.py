@@ -238,6 +238,7 @@ incIndex = 0
 with open(argv[1], 'r') as file:
     string = file.read()
     string = re.sub(r"\\/", r"", string)
+    string = re.sub(r"\[\]", r"", string)
     pos_test_tagged = string.split()
     file.close()
 
@@ -262,14 +263,14 @@ for index in range(0, len(pos_key)):
     if pos_key[index] == "[" or pos_key[index] == "]":
         continue
     else:
-        if pos_test_tagged[flag].split("/")[1] == pos_key[index].split("/")[1].split("|")[0]:
-            incIndex = index_for_confusion_table(pos_test_tagged[flag].split("/")[1])
-            tagCounts[pos_test_tagged[flag].split("/")[1]][incIndex] += 1
+        if pos_test_tagged[index].split("/")[1] == pos_key[index].split("/")[1].split("|")[0]:
+            incIndex = index_for_confusion_table(pos_test_tagged[index].split("/")[1])
+            tagCounts[pos_test_tagged[index].split("/")[1]][incIndex] += 1
             correct_tags += 1
             flag += 1
         else:
             incIndex = index_for_confusion_table(pos_key[index].split("/")[1].split("|")[0])
-            tagCounts[pos_test_tagged[flag].split("/")[1]][incIndex] += 1
+            tagCounts[pos_test_tagged[index].split("/")[1]][incIndex] += 1
             correct_tags += 0
             flag += 1
 
